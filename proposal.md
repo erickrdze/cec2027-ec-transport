@@ -50,9 +50,7 @@ Particular emphasis will be placed on multi-objective formulations that jointly 
 
 ## 5. Link to Previous Edition
 
-- IEEE WCCI 2026 Special Session, “Computational Intelligence for Intelligent & Sustainable Transport Systems”: https://github.com/erickrdze/wcci2026-ists-ci
-
-The CEC 2027 proposal is a focused continuation that concentrates specifically on evolutionary computation and optimization.
+None. This is a new proposed special session.
 
 ## 6. Potential or Committed Papers
 
