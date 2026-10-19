@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proposed IEEE CEC 2027 Special Session on evolutionary computation for sustainable transportation and logistics.">
+  <title>ECSTL 2027 | Proposed IEEE CEC Special Session</title>
+  <style>
+    :root {
+      --ink: #132820;
+      --muted: #617069;
+      --cream: #f4f0e7;
+      --paper: #fffdf8;
+      --green: #154f3d;
+      --green-2: #26775c;
+      --lime: #c8e66a;
+      --orange: #ec8e50;
+      --line: rgba(19, 40, 32, .14);
+      --shadow: 0 22px 60px rgba(18, 54, 42, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: relative;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; text-decoration: none; }
+    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; color: var(--lime); border: 1px solid rgba(255,255,255,.25); border-radius: 50%; }
+    nav { display: flex; gap: 24px; font-size: .92rem; }
+    nav a { text-decoration: none; color: rgba(255,255,255,.82); }
+    nav a:hover { color: #fff; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 720px;
+      color: white;
+      background:
+        radial-gradient(circle at 78% 26%, rgba(200,230,106,.22), transparent 24%),
+        radial-gradient(circle at 70% 68%, rgba(236,142,80,.16), transparent 28%),
+        linear-gradient(135deg, #0c2f25 0%, #16513e 52%, #0e392d 100%);
+    }
+    .map-lines { position: absolute; inset: 0; opacity: .28; pointer-events: none; }
+    .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.18fr .82fr; align-items: center; gap: 64px; padding: 88px 0 108px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; font-size: .74rem; }
+    .eyebrow::before { content: ""; width: 34px; height: 2px; background: var(--lime); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 26px; max-width: 780px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.1rem, 6.8vw, 6.4rem); line-height: .96; letter-spacing: -.055em; font-weight: 500; }
+    h1 em { color: var(--lime); font-style: italic; }
+    .lede { max-width: 680px; color: rgba(255,255,255,.78); font-size: 1.16rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid rgba(255,255,255,.24); text-decoration: none; font-weight: 750; font-size: .9rem; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button.primary { color: var(--ink); background: var(--lime); border-color: var(--lime); }
+    .button.ghost { background: rgba(255,255,255,.06); }
+    .fact-card { position: relative; padding: 34px; border: 1px solid rgba(255,255,255,.18); border-radius: 30px; background: rgba(255,255,255,.08); backdrop-filter: blur(14px); box-shadow: 0 30px 80px rgba(0,0,0,.16); }
+    .status { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; padding: 7px 12px; border-radius: 999px; color: #eaf8c2; background: rgba(200,230,106,.11); font-size: .76rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 5px rgba(200,230,106,.12); }
+    .facts { display: grid; gap: 22px; }
+    .fact { padding-bottom: 19px; border-bottom: 1px solid rgba(255,255,255,.13); }
+    .fact:last-child { padding-bottom: 0; border-bottom: 0; }
+    .fact small { display: block; margin-bottom: 4px; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+    .fact strong { font-size: 1.05rem; }
+    section { padding: 104px 0; }
+    .section-head { display: grid; grid-template-columns: .78fr 1.22fr; gap: 72px; align-items: start; margin-bottom: 56px; }
+    .kicker { color: var(--green-2); text-transform: uppercase; letter-spacing: .15em; font-size: .74rem; font-weight: 850; }
+    h2 { margin: 12px 0 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.3rem, 4vw, 4rem); line-height: 1.05; letter-spacing: -.04em; font-weight: 500; }
+    .section-copy { color: var(--muted); font-size: 1.06rem; }
+    .section-copy p:last-child { margin-bottom: 0; }
+    .scope { background: var(--cream); }
+    .topics { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .topic { min-height: 190px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.34); }
+    .topic span { display: block; margin-bottom: 28px; color: var(--orange); font-weight: 850; font-size: .78rem; }
+    .topic h3 { margin-bottom: 8px; font-size: 1.08rem; line-height: 1.35; }
+    .topic p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .fit-card { padding: 36px; border: 1px solid var(--line); border-radius: 24px; }
+    .fit-card:first-child { color: white; background: var(--green); border-color: var(--green); }
+    .fit-card .number { font-family: Georgia, serif; color: var(--orange); font-size: 2.6rem; }
+    .fit-card:first-child .number { color: var(--lime); }
+    .fit-card p { margin-bottom: 0; color: var(--muted); }
+    .fit-card:first-child p { color: rgba(255,255,255,.72); }
+    .organisers { background: #102d24; color: white; }
+    .organisers .kicker { color: var(--lime); }
+    .organisers .section-copy { color: rgba(255,255,255,.65); }
+    .people { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .person { display: grid; grid-template-columns: 116px 1fr; gap: 24px; align-items: center; padding: 24px; border: 1px solid rgba(255,255,255,.13); border-radius: 24px; background: rgba(255,255,255,.055); }
+    .person img { width: 116px; height: 116px; border-radius: 18px; object-fit: cover; object-position: top; filter: saturate(.86); }
+    .person h3 { margin-bottom: 4px; font-size: 1.04rem; }
+    .person .affiliation { margin-bottom: 12px; color: rgba(255,255,255,.58); font-size: .84rem; }
+    .person a { color: var(--lime); font-size: .8rem; text-decoration: none; }
+    .timeline { display: grid; grid-template-columns: repeat(5, 1fr); margin-top: 46px; border-top: 2px solid var(--green); }
+    .milestone { position: relative; padding: 28px 20px 0 0; }
+    .milestone::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px var(--paper); }
+    .milestone time { display: block; color: var(--green-2); font-weight: 850; font-size: .82rem; }
+    .milestone span { display: block; margin-top: 5px; color: var(--muted); font-size: .88rem; line-height: 1.35; }
+    .legacy { margin-top: 64px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 32px 36px; border-radius: 24px; color: white; background: linear-gradient(105deg, var(--green), #207056); }
+    .legacy p { margin-bottom: 0; color: rgba(255,255,255,.7); }
+    .legacy .button { flex: 0 0 auto; }
+    footer { padding: 34px 0 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    .footer-row { display: flex; justify-content: space-between; gap: 28px; }
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hero { min-height: auto; }
+      .hero-grid, .section-head { grid-template-columns: 1fr; gap: 38px; }
+      .hero-grid { padding: 60px 0 80px; }
+      .topics { grid-template-columns: repeat(2, 1fr); }
+      .people, .fit-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; border-top: 0; border-left: 2px solid var(--green); margin-left: 6px; }
+      .milestone { padding: 0 0 30px 28px; }
+      .milestone::before { top: 5px; left: -7px; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 28px, 1120px); }
+      h1 { font-size: 3.35rem; }
+      section { padding: 76px 0; }
+      .topics { grid-template-columns: 1fr; }
+      .person { grid-template-columns: 82px 1fr; gap: 16px; }
+      .person img { width: 82px; height: 82px; }
+      .legacy, .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <svg class="map-lines" viewBox="0 0 1440 760" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="white" stroke-width="1.2">
+        <path d="M-30 610 C240 470 360 670 600 510 S980 260 1500 430"/>
+        <path d="M80 780 C220 540 480 560 610 280 S970 80 1450 160"/>
+        <path d="M430 -20 C500 170 700 180 810 350 S1060 670 1430 650"/>
+        <path d="M-40 230 C290 310 360 190 640 170 S1140 390 1490 300"/>
+      </g>
+      <g fill="#c8e66a">
+        <circle cx="240" cy="535" r="5"/><circle cx="608" cy="500" r="5"/><circle cx="810" cy="350" r="5"/><circle cx="1060" cy="331" r="5"/><circle cx="1260" cy="340" r="5"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#top"><span class="brand-mark">↗</span><span>ECSTL 2027</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#scope">Scope</a>
+          <a href="#cec">Why CEC</a>
+          <a href="#organisers">Organisers</a>
+          <a href="#dates">Dates</a>
+        </nav>
+      </div>
+      <div class="hero-grid" id="top">
+        <div>
+          <p class="eyebrow">Proposed IEEE CEC 2027 Special Session</p>
+          <h1>Evolutionary computation for <em>moving worlds.</em></h1>
+          <p class="lede">A focused forum on evolutionary optimization for sustainable transportation and logistics—from dynamic routing and traffic control to resilient, low-carbon mobility.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#scope">Explore the scope</a>
+            <a class="button ghost" href="https://ieeecec.org/2027/authors/call-for-special-sessions" target="_blank" rel="noreferrer">Official call ↗</a>
+          </div>
+        </div>
+        <aside class="fact-card" aria-label="Conference details">
+          <div class="status">Proposal in preparation</div>
+          <div class="facts">
+            <div class="fact"><small>Proposed session</small><strong>Evolutionary Computation for Sustainable Transportation and Logistics</strong></div>
+            <div class="fact"><small>Conference</small><strong>2027 IEEE Congress on Evolutionary Computation</strong></div>
+            <div class="fact"><small>When & where</small><strong>25–28 July 2027 · Edinburgh, Scotland, UK</strong></div>
+            <div class="fact"><small>Proposal deadline</small><strong>15 November 2026</strong></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="scope" id="scope">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Motivation & scope</span><h2>Transport is a hard optimization laboratory.</h2></div>
+          <div class="section-copy">
+            <p>Modern mobility and logistics combine large search spaces, competing objectives, uncertain demand, time-dependent networks, operational constraints, and decisions that must adapt while the system is running.</p>
+            <p>ECSTL connects evolutionary computation researchers with transport and operations specialists. We welcome new algorithms motivated by transport challenges and rigorous applications that reveal reusable insights for evolutionary optimization.</p>
+          </div>
+        </div>
+        <div class="topics">
+          <article class="topic"><span>01</span><h3>Routing & scheduling</h3><p>Dynamic, stochastic, multi-echelon, and last-mile routing; crew and fleet scheduling.</p></article>
+          <article class="topic"><span>02</span><h3>Traffic & network control</h3><p>Signals, ramp metering, network design, congestion management, and incident response.</p></article>
+          <article class="topic"><span>03</span><h3>Public & shared mobility</h3><p>Transit synchronization, demand-responsive services, ride sharing, and multimodal planning.</p></article>
+          <article class="topic"><span>04</span><h3>Low-carbon transport</h3><p>Electric fleets, charging, energy-aware routing, emissions, and lifecycle objectives.</p></article>
+          <article class="topic"><span>05</span><h3>Infrastructure & resilience</h3><p>Roadworks, maintenance, disruption recovery, robustness, and climate adaptation.</p></article>
+          <article class="topic"><span>06</span><h3>Simulation & digital twins</h3><p>Surrogate-assisted search, expensive optimization, co-simulation, and real-time decision support.</p></article>
+          <article class="topic"><span>07</span><h3>Multi-objective mobility</h3><p>Efficiency, cost, safety, accessibility, equity, emissions, and service quality trade-offs.</p></article>
+          <article class="topic"><span>08</span><h3>Evolutionary learning</h3><p>Neuroevolution, automated design, quality-diversity, and data-driven optimization.</p></article>
+          <article class="topic"><span>09</span><h3>Hybrid optimization</h3><p>Memetic algorithms, matheuristics, co-evolution, and combinations with exact methods.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cec">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Scientific fit</span><h2>Built around the questions CEC asks best.</h2></div>
+          <div class="section-copy"><p>The session treats transportation as a source of demanding evolutionary computation research—not only as an application area. The goal is to produce methods, benchmarks, and lessons that travel across domains.</p></div>
+        </div>
+        <div class="fit-grid">
+          <article class="fit-card"><div class="number">01</div><h3>Methodological depth</h3><p>Dynamic and uncertain optimization, constraint handling, scalability, expensive objectives, many-objective search, and adaptation are central EC problems.</p></article>
+          <article class="fit-card"><div class="number">02</div><h3>Measurable real-world impact</h3><p>Transport offers clear operational, environmental, and social outcomes, enabling convincing evaluation beyond synthetic functions.</p></article>
+          <article class="fit-card"><div class="number">03</div><h3>Cross-community value</h3><p>The session creates a meeting point for evolutionary computation, operations research, intelligent transportation, logistics, and urban systems.</p></article>
+          <article class="fit-card"><div class="number">04</div><h3>Reproducible progress</h3><p>Shared datasets, simulators, benchmark formulations, open implementations, and realistic uncertainty models are especially encouraged.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="organisers" id="organisers">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Organising team</span><h2>Evolutionary computation meets transport expertise.</h2></div>
+          <div class="section-copy"><p>The proposed team spans Spain, Mexico, and Greece and combines research in evolutionary computation, intelligent transport, optimization, machine learning, traffic operations, and logistics.</p></div>
+        </div>
+        <div class="people">
+          <article class="person"><img src="images/erick.png" alt="Erick Rodríguez-Esparza"><div><h3>Erick Rodríguez-Esparza</h3><p class="affiliation">University of Deusto · Spain<br>Corresponding organiser</p><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/65752/investigador" target="_blank" rel="noreferrer">Research profile ↗</a></div></article>
+          <article class="person"><img src="images/antonio.png" alt="Antonio D. Masegosa"><div><h3>Antonio D. Masegosa</h3><p class="affiliation">University of Deusto · Spain<br>Computational intelligence & mobility</p><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/21294/investigador" target="_blank" rel="noreferrer">Research profile ↗</a></div></article>
+          <article class="person"><img src="images/diego.png" alt="Diego Oliva"><div><h3>Diego Oliva</h3><p class="affiliation">Universidad de Guadalajara · Mexico<br>Evolutionary & swarm optimization</p><a href="https://diegoliva.com/" target="_blank" rel="noreferrer">Research profile ↗</a></div></article>
+          <article class="person"><img src="images/eleni.png" alt="Eleni I. Vlahogianni"><div><h3>Eleni I. Vlahogianni</h3><p class="affiliation">National Technical University of Athens · Greece<br>Traffic operations & intelligent transport</p><a href="https://www.transport.ntua.gr/dsait/member/eleni-vlahogianni" target="_blank" rel="noreferrer">Research profile ↗</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dates">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Important dates</span><h2>The road to Edinburgh.</h2></div>
+          <div class="section-copy"><p>These dates follow the IEEE CEC 2027 website. Prospective authors should consult the official conference pages for updates and submission instructions.</p></div>
+        </div>
+        <div class="timeline">
+          <div class="milestone"><time datetime="2026-11-15">15 Nov 2026</time><span>Special Session proposal deadline</span></div>
+          <div class="milestone"><time datetime="2026-12-07">7 Dec 2026</time><span>Proposal notification</span></div>
+          <div class="milestone"><time datetime="2027-02-28">28 Feb 2027</time><span>Full paper deadline</span></div>
+          <div class="milestone"><time datetime="2027-04-07">7 Apr 2027</time><span>Paper acceptance notification</span></div>
+          <div class="milestone"><time datetime="2027-07-25">25–28 Jul 2027</time><span>IEEE CEC 2027 in Edinburgh</span></div>
+        </div>
+        <div class="legacy">
+          <div><h3>Building on the WCCI 2026 session</h3><p>ECSTL sharpens the previous cross-disciplinary scope around evolutionary computation and transport optimization.</p></div>
+          <a class="button ghost" href="https://github.com/erickrdze/wcci2026-ists-ci" target="_blank" rel="noreferrer">View previous edition ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><span>ECSTL 2027 · Proposed Special Session</span><span>Proposal in preparation · No IEEE endorsement or acceptance is implied.</span></div>
+  </footer>
+</body>
+</html>
