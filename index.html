@@ -16,7 +16,7 @@
       --accent: #d7e79d;
       --line: #d6ddd8;
       --white-line: rgba(255, 255, 255, .2);
-      --content: 1080px;
+      --content: 1180px;
     }
     * { box-sizing: border-box; }
     html { scroll-padding-top: 24px; }
@@ -81,18 +81,7 @@
       position: relative;
       z-index: 1;
       max-width: 900px;
-      padding: 68px 0 76px;
-    }
-    .status {
-      display: inline-block;
-      margin-bottom: 22px;
-      padding: 6px 9px;
-      border: 1px solid rgba(215, 231, 157, .5);
-      color: var(--accent);
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      padding: 62px 0 70px;
     }
     .conference-label {
       margin-bottom: 10px;
@@ -135,13 +124,13 @@
       text-decoration: none;
     }
     .hero-link:hover { background: rgba(255, 255, 255, .08); }
-    main section { padding: 76px 0; }
+    main section { padding: 68px 0; }
     main section + section { border-top: 1px solid var(--line); }
     .section-tint { background: var(--cream); }
     .section-grid {
       display: grid;
-      grid-template-columns: minmax(220px, .72fr) minmax(0, 1.55fr);
-      gap: 72px;
+      grid-template-columns: minmax(235px, .68fr) minmax(0, 1.7fr);
+      gap: 64px;
       align-items: start;
     }
     h2 {
@@ -157,29 +146,36 @@
     .prose p { margin-bottom: 18px; }
     .prose p:last-child { margin-bottom: 0; }
     .topics-intro { margin-bottom: 28px; color: #3f554d; }
-    .topic-list {
+    .topic-groups {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 34px;
+      gap: 40px;
+    }
+    .topic-group {
+      border-top: 3px solid var(--green);
+    }
+    .topic-group h3 {
+      margin: 0;
+      padding: 16px 0 14px;
+      color: var(--green);
+      font-size: 1rem;
+    }
+    .topic-list {
       margin: 0;
       padding: 0;
-      border-top: 1px solid var(--line);
       list-style: none;
     }
     .topic-list li {
       position: relative;
-      padding: 14px 0 14px 21px;
+      padding: 13px 0;
       border-bottom: 1px solid var(--line);
       color: #31483f;
+      font-size: .94rem;
     }
-    .topic-list li::before {
-      content: "";
-      position: absolute;
-      top: 23px;
-      left: 2px;
-      width: 7px;
-      height: 7px;
-      background: var(--green);
+    .topic-list strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
     }
     .info-panel {
       padding: 28px 30px;
@@ -267,7 +263,7 @@
       nav { display: grid; width: 100%; grid-template-columns: repeat(3, auto); justify-content: start; gap: 7px 16px; }
       nav a { font-size: .82rem; }
       h1 { font-size: 2.25rem; }
-      .topic-list, .people { grid-template-columns: 1fr; }
+      .topic-groups, .people { grid-template-columns: 1fr; }
       .date-list li { grid-template-columns: 1fr; gap: 2px; }
       .person { grid-template-columns: 82px 1fr; gap: 16px; min-height: 130px; padding: 18px; }
       .person img { width: 82px; height: 82px; }
@@ -301,7 +297,6 @@
         </nav>
       </div>
       <div class="hero">
-        <div class="status">Special Session Proposal in Preparation</div>
         <p class="conference-label">Proposed Special Session | IEEE CEC 2027</p>
         <h1>Evolutionary Computation for Sustainable Transportation and Logistics</h1>
         <p class="event-details">25–28 July 2027 | Edinburgh, Scotland, UK</p>
@@ -315,9 +310,9 @@
       <div class="wrap section-grid">
         <div><h2>Overview and Scope</h2></div>
         <div class="prose">
-          <p>Transportation and logistics involve complex optimisation problems characterised by dynamic operating conditions, uncertain demand, large search spaces and multiple, often conflicting objectives. These characteristics present important challenges for the design and application of evolutionary computation methods.</p>
-          <p>This special session aims to bring together researchers working on evolutionary algorithms and transportation-related optimisation. It welcomes methodological contributions, hybrid optimisation approaches and application-oriented studies addressing realistic problems in transportation, mobility and logistics.</p>
-          <p>Particular interest is given to methods that address uncertainty, scalability, computational efficiency, operational constraints and multi-objective decision-making.</p>
+          <p>Transportation and logistics involve complex optimisation problems characterised by dynamic operating environments, uncertain demand, large search spaces, operational constraints and multiple, often conflicting objectives.</p>
+          <p>This special session brings together research on evolutionary computation and transportation-related optimisation. It welcomes evolutionary and hybrid optimisation methods, as well as application-oriented studies addressing realistic problems in transportation, mobility and logistics.</p>
+          <p>The session welcomes methodological advances motivated by transportation problems and applied studies that contribute to the design, evaluation or adaptation of evolutionary algorithms. Particular attention is given to uncertainty, scalability, realistic operational constraints, and the balance between solution quality and computational efficiency. Comparative studies and reproducible experimental evaluations are also encouraged.</p>
         </div>
       </div>
     </section>
@@ -326,20 +321,30 @@
         <div><h2>Topics of Interest</h2></div>
         <div>
           <p class="topics-intro">Topics of interest include, but are not limited to, the following:</p>
-          <ul class="topic-list">
-            <li>Evolutionary algorithms for vehicle routing and scheduling</li>
-            <li>Dynamic and stochastic transportation optimisation</li>
-            <li>Traffic signal control and transportation network optimisation</li>
-            <li>Public transport, shared mobility and demand-responsive transportation</li>
-            <li>Sustainable mobility and emission-aware optimisation</li>
-            <li>Electric vehicle routing, charging and fleet management</li>
-            <li>Multi-objective and many-objective optimisation in transportation</li>
-            <li>Transportation infrastructure planning, maintenance and resilience</li>
-            <li>Simulation-based and surrogate-assisted optimisation</li>
-            <li>Evolutionary computation for logistics and supply chain management</li>
-            <li>Hybrid evolutionary algorithms and matheuristics</li>
-            <li>Data-driven evolutionary optimisation and neuroevolution</li>
-          </ul>
+          <div class="topic-groups">
+            <article class="topic-group" aria-labelledby="application-topics">
+              <h3 id="application-topics">Transportation and Logistics Applications</h3>
+              <ul class="topic-list">
+                <li><strong>Vehicle routing and scheduling</strong>Dynamic and stochastic vehicle routing, fleet coordination, last-mile delivery, and transportation scheduling.</li>
+                <li><strong>Traffic and network optimisation</strong>Traffic signal control, congestion management, network design, incident management, and adaptive traffic operations.</li>
+                <li><strong>Public transport and shared mobility</strong>Demand-responsive transport, multimodal coordination, ride-sharing, service planning, and mobility-on-demand.</li>
+                <li><strong>Sustainable and electric mobility</strong>Electric vehicle routing, charging infrastructure, energy-aware fleet management, and emission-aware optimisation.</li>
+                <li><strong>Transportation infrastructure and resilience</strong>Roadworks planning, infrastructure maintenance, network disruptions, robust planning, and recovery strategies.</li>
+                <li><strong>Logistics and supply chains</strong>Freight transport, urban logistics, distribution networks, and multi-echelon logistics optimisation.</li>
+              </ul>
+            </article>
+            <article class="topic-group" aria-labelledby="method-topics">
+              <h3 id="method-topics">Evolutionary Computation Methods and Challenges</h3>
+              <ul class="topic-list">
+                <li><strong>Multi-objective and robust optimisation</strong>Conflicting objectives involving travel time, cost, emissions, accessibility, safety, and service quality.</li>
+                <li><strong>Dynamic and uncertain optimisation</strong>Real-time adaptation, time-dependent constraints, uncertain demand, and changing operating conditions.</li>
+                <li><strong>Simulation-based and surrogate-assisted optimisation</strong>Traffic simulation, digital twins, computationally expensive evaluations, and surrogate modelling.</li>
+                <li><strong>Hybrid and learning-assisted evolutionary methods</strong>Memetic algorithms, matheuristics, hyper-heuristics, neuroevolution, and integration with machine learning.</li>
+                <li><strong>Scalable and distributed evolutionary optimisation</strong>Large-scale transportation networks, parallel optimisation, cooperative search, and multi-agent coordination.</li>
+                <li><strong>Benchmarking and reproducible evaluation</strong>Realistic problem formulations, comparative studies, simulation environments, and reproducible experimental protocols.</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -347,9 +352,8 @@
       <div class="wrap section-grid">
         <div><h2>Relevance to IEEE CEC 2027</h2></div>
         <div class="prose">
-          <p>The proposed session is closely aligned with the scope of IEEE CEC, particularly in evolutionary optimisation, constrained optimisation, multi-objective search, dynamic optimisation and real-world applications.</p>
-          <p>Transportation and logistics provide challenging problems for investigating the performance and practical applicability of evolutionary algorithms. The session encourages contributions that advance evolutionary computation methods, provide rigorous experimental evaluations, or demonstrate their applicability to complex transportation systems.</p>
-          <p>The session also aims to encourage exchanges between researchers in evolutionary computation, transportation engineering and operations research.</p>
+          <p>The session is aligned with several core areas of IEEE CEC, including constrained, dynamic, stochastic, multi-objective, and large-scale evolutionary optimisation. Transportation and logistics provide challenging problems for evaluating these methods under realistic operational conditions, computational limitations, and uncertain environments.</p>
+          <p>By connecting methodological research with practical optimisation problems, the session aims to encourage contributions that advance evolutionary computation and provide rigorous evaluations of its applicability to transportation and logistics systems.</p>
         </div>
       </div>
     </section>
