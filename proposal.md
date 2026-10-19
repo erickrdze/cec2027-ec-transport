@@ -27,12 +27,12 @@
 - Web: https://diegoliva.com/
 - Short biography: Diego Oliva is an Associate Professor at Universidad de Guadalajara and a member of its Evolutionary Computation and Machine Learning research group. His work focuses on evolutionary computation, swarm intelligence, hybrid metaheuristics, machine learning, and real-world optimization.
 
-### Eleni I. Vlahogianni
+### Gregor Papa
 
-- Affiliation: National Technical University of Athens, Greece
-- Email: elenivl@central.ntua.gr
-- Web: https://www.transport.ntua.gr/dsait/member/eleni-vlahogianni
-- Short biography: Eleni I. Vlahogianni is Professor in the Department of Transportation Planning and Engineering at the National Technical University of Athens. Her research addresses traffic operations, intelligent transportation systems, mobility analytics, and data-driven methods for understanding and managing transport networks.
+- Affiliation: Jožef Stefan Institute, Slovenia
+- Email: gregor.papa@ijs.si
+- Web: https://cs.ijs.si/papa/
+- Short biography: Gregor Papa is a Senior Researcher and Head of the Computer Systems Department at the Jožef Stefan Institute. He is also an Associate Professor at the Jožef Stefan International Postgraduate School. His research focuses on metaheuristic optimisation methods, the dynamic tuning of algorithm control parameters, and hardware implementations of complex algorithms.
 
 ## 3. Primary Contact Email Address
 
