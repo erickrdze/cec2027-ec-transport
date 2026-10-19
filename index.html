@@ -185,9 +185,7 @@
     .info-panel p:last-of-type { margin-bottom: 20px; }
     .text-link { display: inline-block; font-weight: 700; }
     .dates-grid {
-      display: grid;
-      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
-      gap: 28px;
+      max-width: 760px;
     }
     .date-group {
       padding: 28px 30px;
@@ -255,7 +253,6 @@
       nav { justify-content: flex-start; }
       .hero { padding: 58px 0 66px; }
       .section-grid, .footer-grid { grid-template-columns: 1fr; gap: 26px; }
-      .dates-grid { grid-template-columns: 1fr; }
       main section { padding: 62px 0; }
     }
     @media (max-width: 620px) {
@@ -362,7 +359,6 @@
         <div><h2>Submission Information</h2></div>
         <div class="info-panel prose">
           <p>Following acceptance of the special session proposal, authors will be invited to submit original and unpublished research papers through the official IEEE CEC 2027 submission system. Submissions will follow the conference's formatting requirements, review procedures and publication policies.</p>
-          <p>This website does not currently accept submissions. Prospective authors should consult the official conference information for paper topics, requirements and updates.</p>
           <a class="text-link" href="https://ieeecec.org/2027/authors/call-for-papers" target="_blank" rel="noreferrer">IEEE CEC 2027 Call for Papers</a>
         </div>
       </div>
@@ -372,15 +368,8 @@
         <div><h2>Important Dates</h2></div>
         <div>
           <div class="dates-grid">
-            <div class="date-group">
-              <h3>Proposal stage</h3>
-              <ul class="date-list">
-                <li><time datetime="2026-11-15">15 November 2026</time><span>Special Session Proposal Deadline</span></li>
-                <li><time datetime="2026-12-07">7 December 2026</time><span>Special Session Proposal Notification</span></li>
-              </ul>
-            </div>
             <div class="date-group author-dates">
-              <h3>Conference deadlines for prospective authors</h3>
+              <h3>Conference deadlines</h3>
               <ul class="date-list">
                 <li><time datetime="2027-02-28">28 February 2027</time><span>Full Paper Submission Deadline</span></li>
                 <li><time datetime="2027-04-07">7 April 2027</time><span>Paper Acceptance Notification</span></li>
