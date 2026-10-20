@@ -34,4 +34,4 @@ Would you be interested in contributing? If so, please send the provisional deta
 
 Best regards,
 
-Erick Rodríguez-Esparza, Antonio D. Masegosa, Diego Oliva, and Gregor Papa
+Erick Rodríguez-Esparza, Diego Oliva, and Gregor Papa

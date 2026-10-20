@@ -184,7 +184,7 @@
     .organisers { background: var(--cream); }
     .people {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
     .person {
@@ -228,6 +228,7 @@
       .hero { padding: 48px 0 56px; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
       .people { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .people .person:last-child { grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center; }
       main section { padding: 52px 0; }
     }
     @media (max-width: 620px) {
@@ -238,6 +239,7 @@
       h1 { font-size: 2.25rem; }
       main section { padding: 46px 0; }
       .topic-groups, .people { grid-template-columns: 1fr; }
+      .people .person:last-child { grid-column: auto; width: 100%; }
       .topic-groups { gap: 30px; }
       .dates-table th, .dates-table td { display: block; width: 100%; padding: 8px 0 0; border-bottom: 0; }
       .dates-table td { padding: 1px 0 10px; border-bottom: 1px solid var(--line); }
@@ -348,7 +350,6 @@
         <h2>Organisers</h2>
         <div class="people">
           <article class="person"><img src="images/erick.png" alt="Portrait of Erick Rodríguez-Esparza"><div><h3>Erick Rodríguez-Esparza</h3><p>University of Deusto<br>Spain</p><p class="role">Corresponding organiser</p><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/65752/investigador" target="_blank" rel="noreferrer">Research profile</a></div></article>
-          <article class="person"><img src="images/antonio.png" alt="Portrait of Antonio D. Masegosa"><div><h3>Antonio D. Masegosa</h3><p>University of Deusto<br>Spain</p><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/21294/investigador" target="_blank" rel="noreferrer">Research profile</a></div></article>
           <article class="person"><img src="images/diego.png" alt="Portrait of Diego Oliva"><div><h3>Diego Oliva</h3><p>Universidad de Guadalajara<br>Mexico</p><a href="https://diegoliva.com/" target="_blank" rel="noreferrer">Research profile</a></div></article>
           <article class="person"><img src="images/gregor.jpg" alt="Portrait of Gregor Papa"><div><h3>Gregor Papa</h3><p>Jožef Stefan Institute<br>Slovenia</p><a href="https://cs.ijs.si/papa/" target="_blank" rel="noreferrer">Research profile</a></div></article>
         </div>

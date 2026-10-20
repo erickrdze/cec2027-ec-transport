@@ -13,13 +13,6 @@
 - Web: https://www.deusto.es/en/home/we-are-deusto/team/researchers/65752/investigador
 - Short biography: Erick Rodríguez-Esparza is an Associate Researcher at the University of Deusto. His research lies at the intersection of evolutionary and swarm-based optimization, machine learning, and intelligent transportation systems, with particular interest in practical decision-support methods for mobility and infrastructure management.
 
-### Antonio D. Masegosa
-
-- Affiliation: University of Deusto, Spain
-- Email: ad.masegosa@deusto.es
-- Web: https://www.deusto.es/en/home/we-are-deusto/team/researchers/21294/investigador
-- Short biography: Antonio D. Masegosa is an Ikerbasque Research Associate Professor at DeustoTech, University of Deusto. His research focuses on computational intelligence, data-driven optimization, and intelligent mobility, including the design of decision-support methods for complex transport systems.
-
 ### Diego Oliva
 
 - Affiliation: Universidad de Guadalajara, Mexico
