@@ -141,14 +141,22 @@
     .prose p { margin-bottom: 18px; }
     .prose p:last-child { margin-bottom: 0; }
     .topics-intro { margin-bottom: 18px; color: #3f554d; }
-    .topic-list {
+    .topic-groups {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 44px;
+      gap: 44px;
+    }
+    .topic-group h3 {
+      margin-bottom: 5px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--green);
+      color: var(--green);
+      font-size: 1rem;
+    }
+    .topic-list {
       margin: 0;
       padding: 0;
       list-style: none;
-      border-top: 1px solid var(--line);
     }
     .topic-list li {
       position: relative;
@@ -228,7 +236,9 @@
       nav { display: grid; width: 100%; grid-template-columns: repeat(3, auto); justify-content: start; gap: 7px 16px; }
       nav a { font-size: .82rem; }
       h1 { font-size: 2.25rem; }
-      .topic-list, .people { grid-template-columns: 1fr; }
+      main section { padding: 46px 0; }
+      .topic-groups, .people { grid-template-columns: 1fr; }
+      .topic-groups { gap: 30px; }
       .dates-table th, .dates-table td { display: block; width: 100%; padding: 8px 0 0; border-bottom: 0; }
       .dates-table td { padding: 1px 0 10px; border-bottom: 1px solid var(--line); }
       .person { grid-template-columns: 82px 1fr; gap: 16px; min-height: 130px; padding: 18px; }
@@ -284,20 +294,30 @@
       <div class="wrap">
         <h2>Topics of Interest</h2>
         <p class="topics-intro">Topics of interest include, but are not limited to:</p>
-        <ul class="topic-list">
-          <li>Evolutionary algorithms for vehicle routing and scheduling</li>
-          <li>Traffic signal control and transportation network optimisation</li>
-          <li>Public transport, shared mobility and demand-responsive transport</li>
-          <li>Sustainable mobility, electric vehicles and charging optimisation</li>
-          <li>Freight transportation, urban logistics and supply chain optimisation</li>
-          <li>Transportation infrastructure planning and network resilience</li>
-          <li>Multi-objective and many-objective optimisation</li>
-          <li>Dynamic, stochastic and robust optimisation</li>
-          <li>Simulation-based and surrogate-assisted evolutionary optimisation</li>
-          <li>Hybrid evolutionary algorithms and matheuristics</li>
-          <li>Learning-assisted, adaptive and distributed evolutionary algorithms</li>
-          <li>Benchmarking and experimental evaluation of evolutionary methods in transportation</li>
-        </ul>
+        <div class="topic-groups">
+          <div class="topic-group">
+            <h3>Transportation and Logistics Applications</h3>
+            <ul class="topic-list">
+              <li>Evolutionary algorithms for vehicle routing and scheduling</li>
+              <li>Traffic signal control and transportation network optimisation</li>
+              <li>Public transport, shared mobility and demand-responsive transport</li>
+              <li>Sustainable mobility, electric vehicles and charging optimisation</li>
+              <li>Freight transportation, urban logistics and supply chain optimisation</li>
+              <li>Transportation infrastructure planning and network resilience</li>
+            </ul>
+          </div>
+          <div class="topic-group">
+            <h3>Evolutionary Computation Methods</h3>
+            <ul class="topic-list">
+              <li>Multi-objective and many-objective optimisation</li>
+              <li>Dynamic, stochastic and robust optimisation</li>
+              <li>Simulation-based and surrogate-assisted evolutionary optimisation</li>
+              <li>Hybrid evolutionary algorithms and matheuristics</li>
+              <li>Learning-assisted, adaptive and distributed evolutionary algorithms</li>
+              <li>Benchmarking and experimental evaluation of evolutionary methods in transportation</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <section id="submission">
