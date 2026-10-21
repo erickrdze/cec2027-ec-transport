@@ -191,8 +191,8 @@
       display: grid;
       grid-template-columns: 78px 1fr;
       gap: 15px;
-      align-items: center;
-      min-height: 126px;
+      align-items: start;
+      min-height: 190px;
       padding: 16px;
       border: 1px solid #d8d8ce;
       background: var(--paper);
@@ -205,9 +205,11 @@
       object-position: top;
     }
     .person h3 { margin-bottom: 5px; font-size: 1.03rem; }
-    .person p { margin-bottom: 10px; color: var(--muted); font-size: .88rem; line-height: 1.45; }
-    .person .role { color: var(--green); font-size: .78rem; font-weight: 700; }
-    .person a { font-size: .84rem; font-weight: 700; }
+    .person p { margin-bottom: 8px; color: var(--muted); font-size: .84rem; line-height: 1.4; }
+    .person .expertise { color: var(--ink); font-size: .8rem; font-weight: 600; }
+    .person .role { color: var(--green); font-size: .76rem; font-weight: 700; }
+    .person-links { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+    .person-links a { overflow-wrap: anywhere; font-size: .78rem; font-weight: 700; line-height: 1.35; }
     footer {
       padding: 38px 0;
       color: rgba(255, 255, 255, .76);
@@ -243,7 +245,7 @@
       .topic-groups { gap: 30px; }
       .dates-table th, .dates-table td { display: block; width: 100%; padding: 8px 0 0; border-bottom: 0; }
       .dates-table td { padding: 1px 0 10px; border-bottom: 1px solid var(--line); }
-      .person { grid-template-columns: 82px 1fr; gap: 16px; min-height: 130px; padding: 18px; }
+      .person { grid-template-columns: 82px 1fr; gap: 16px; min-height: 186px; padding: 18px; }
       .person img { width: 82px; height: 82px; }
     }
   </style>
@@ -349,9 +351,9 @@
       <div class="wrap">
         <h2>Organisers</h2>
         <div class="people">
-          <article class="person"><img src="images/erick.png" alt="Portrait of Erick Rodríguez-Esparza"><div><h3>Erick Rodríguez-Esparza</h3><p>University of Deusto<br>Spain</p><p class="role">Corresponding organiser</p><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/65752/investigador" target="_blank" rel="noreferrer">Research profile</a></div></article>
-          <article class="person"><img src="images/diego.png" alt="Portrait of Diego Oliva"><div><h3>Diego Oliva</h3><p>Universidad de Guadalajara<br>Mexico</p><a href="https://diegoliva.com/" target="_blank" rel="noreferrer">Research profile</a></div></article>
-          <article class="person"><img src="images/gregor.jpg" alt="Portrait of Gregor Papa"><div><h3>Gregor Papa</h3><p>Jožef Stefan Institute<br>Slovenia</p><a href="https://cs.ijs.si/papa/" target="_blank" rel="noreferrer">Research profile</a></div></article>
+          <article class="person"><img src="images/erick.png" alt="Portrait of Erick Rodríguez-Esparza" loading="lazy"><div><h3>Erick Rodríguez-Esparza</h3><p>University of Deusto<br>Spain</p><p class="expertise">Evolutionary Computation &bull; Intelligent Transportation Systems</p><p class="role">Corresponding organiser</p><div class="person-links"><a href="mailto:erick.rodriguez@deusto.es">erick.rodriguez@deusto.es</a><a href="https://www.deusto.es/en/home/we-are-deusto/team/researchers/65752/investigador" target="_blank" rel="noreferrer">Research profile</a></div></div></article>
+          <article class="person"><img src="images/diego.png" alt="Portrait of Diego Oliva" loading="lazy"><div><h3>Diego Oliva</h3><p>Universidad de Guadalajara<br>Mexico</p><p class="expertise">Evolutionary Computation &bull; Swarm and Hybrid Metaheuristics</p><div class="person-links"><a href="mailto:diego.oliva@cucei.udg.mx">diego.oliva@cucei.udg.mx</a><a href="https://diegoliva.com/" target="_blank" rel="noreferrer">Research profile</a></div></div></article>
+          <article class="person"><img src="images/gregor.jpg" alt="Portrait of Gregor Papa" loading="lazy"><div><h3>Gregor Papa</h3><p>Jožef Stefan Institute<br>Slovenia</p><p class="expertise">Metaheuristic Optimisation &bull; Adaptive Algorithms</p><div class="person-links"><a href="mailto:gregor.papa@ijs.si">gregor.papa@ijs.si</a><a href="https://cs.ijs.si/papa/" target="_blank" rel="noreferrer">Research profile</a></div></div></article>
         </div>
       </div>
     </section>
